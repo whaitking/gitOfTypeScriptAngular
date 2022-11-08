@@ -1,21 +1,33 @@
 <div *ngFor="let month of months" class="card-container">
-  <div  class="card">
-    <span>{{years.getMonth()}}</span>
-    <div *ngFor="let day of getDaysInYearMonth(year,month)">
+  <div class="card">
+    <span>{{getMonthInYear(year,month) | date:'LLLL'}}</span>
+
     <br>
-    <ul class="weekdays">
-      <li *ngFor="let item_week of week">
-        {{item_week}}
-      </li>
-    </ul>
-    <ul class="days">
-      <li>
-        {{day.getDate()}}
-      </li>
-    </ul>
-    
+
+    <div>
+
+      <div class="weekdays">
+        <p *ngFor="let item_week of week">
+          {{item_week}}
+        </p>
+
+      </div>
+
+      <div>
+        <div  class="days">
+
+          <p *ngFor="let day of getDaysInYearMonth(year,month)">
+
+            {{day.getDate()}}
+
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
-  </div>
-  <!-- Dentro del parágrafo va la información del Character que se está modifcando -->
   <p></p>
 </div>

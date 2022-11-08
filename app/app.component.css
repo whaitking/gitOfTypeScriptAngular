@@ -42,7 +42,7 @@
   background-color:#ddd;
 }
 
-.weekdays li {
+.weekdays p {
   display: inline-block;
   width: 13.6%;
   color: #666;
@@ -57,7 +57,7 @@
   margin: 0;
 }
 
-.days li {
+.days p {
   list-style-type: none;
   display: inline-block;
   width: 13.6%;
