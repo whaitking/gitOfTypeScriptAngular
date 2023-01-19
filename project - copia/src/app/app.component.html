@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let lista of listas">
+            <div class=" p-2 bg-dark m-2 rounded-3">
+                <h2 class="text-center text-white">{{lista}}</h2>
+                <div class="row m-1 bg-secondary rounded-3" *ngFor="let tarea of tareas, index as i">
+                    <app-tarea [tareas]="tarea" *ngIf="tarea.lista == lista"></app-tarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
